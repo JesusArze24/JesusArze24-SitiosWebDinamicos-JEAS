@@ -1,0 +1,31 @@
+<%- include('layout', {body: null}) %>
+<h2>Lista de datos</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% datos.forEach(dato => { %>
+            <tr>
+                <td><%= dato.id %></td>
+                <td><%= dato.nombres %></td>
+                <td><%= dato.apellidos %></td>
+                <td><%= dato.direccion %></td>
+                <td><%= dato.telefono %></td>
+                <td>
+                    <a href="/edit/<%= dato.id %>">Editar</a>
+                    <a href="/delete/<%= dato.id %>">Eliminar</a>
+                </td>
+            </tr>
+        <% }); %>
+        <a href="/add">Registrar datos</a>
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+<%- include('layout', { body: null }) %>
+<% if (dato) { %>
+  <h2>Cambiar datos</h2>
+  <form action="/edit/<%= dato.id %>" method="POST">
+    <label>Nombres: <input type="text" name="nombres" required value="<%= dato.nombres %>"></label>
+    <label>Apellidos: <input type="text" name="apellidos" required value="<%= dato.apellidos %>"></label>
+    <label>Dirección: <input type="text" name="direccion" required value="<%= dato.direccion %>"></label>
+    <label>Telefono: <input type="number" name="telefono" required value="<%= dato.telefono %>"></label>
+    <button type="submit">Actualizar</button>
+  </form>
+<% } else { %>
+  <p>Error: No se encontró el id del usuario</p>
+<% } %>
