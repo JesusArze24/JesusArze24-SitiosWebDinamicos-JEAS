@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-image:url(./Images/Relampago.avif);
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    font-size: clamp(15px, 2.3vw, 30px );
+
+    p {
+        margin-left: 20px;
+    }
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+    font-size: clamp(10px,1vw,16px);
+    margin: 10px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    svg{
+        stroke-width: 1px;
+        transform: scale(1.3vw);
+    }
+}
+
+#banner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    background-image: url(./Images/gymshark-ig-hero-1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    max-height: 60vh;
+    min-height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 10.1vh;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-bottom: 3%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    p {
+        font-size: clamp(15px, 2.3vw, 26px);
+        font-weight: lighter;
+    }
+
+    button {
+        background-color: #ffffff;
+        color: rgb(65, 64, 64);
+        padding: 1vw 2vw;
+        border-radius: 35px;
+        border: none;
+        cursor: pointer;
+        margin: 20px 10px 0 10px;
+        text-decoration: none;
+        font-size: clamp(7px, 1vw, 11px);
+    }
+
+    button:hover {
+        background-color: #cecece;
+        transition: background 0.3s ease;
+    }
+}
+
+#productos{
+    overflow: hidden;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: clamp(5px, 2.2vw, 20px);
+    h1{
+        margin: clamp(5px, 2.2vw, 20px);
+        font-size: clamp(14px, 1.3vw, 25px);
+    }
+
+}
+
+.grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: clamp(170px,23vw,400px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: clamp(5px, 1vw, 20px);
+    margin: 0 clamp(5px, 2.2vw, 20px);
+    scrollbar-width: none;
+}
+
+.producto {
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+    min-width: 130px;
+    img {
+        width: 100%;
+        height: auto;
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+    }
+}
+
+.producto-detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: clamp(5px, 1vw, 20px);
+    img{
+        width: clamp(170px, 30vw, 450px);
+    }
+}
+
+.descripcion-detalle {
+    padding: 10px;
+    font-size: clamp(10px, 2vw, 20px);
+    text-align: center;
+}
+.titulo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    font-size: clamp(20px, 2vw, 30px);
+    text-align: center;
+}
+
+.scroll-button {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: none;
+    border: none;
+
+}
+
+#scroll-left {
+    left: 10px;
+}
+
+#scroll-right {
+    right: 10px;
+}
+.descripcion {
+    padding: 10px;
+    font-size: clamp(10px, 1vw, 15px);
+    button {
+        background-color: #000000;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background 0.3s ease;
+        width: 80%;
+        margin: 10px;
+    }
+
+    button:hover {
+        background-color: #3f3f3f;
+    }
+
+    p {
+        display: -webkit-box;
+        margin: 5px 0;
+        overflow: hidden;
+        -webkit-line-clamp: 2;      
+        text-overflow: ellipsis;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+.contenedor-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+    h1{
+        padding: clamp(5px, 2.2vw, 20px);
+    }
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(203, 203, 203);
+    padding: 40px;
+    border-radius: 10px;
+    font-size: clamp(12px, 1vw, 20px);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: clamp(5px, 2.2vw, 20px);
+    width: clamp(55px, 60vw, 1500px);
+    input{
+        font-size: clamp(12px, .9vw, 20px);
+    }
+}
+.input-formulario {
+    font-size: clamp(12px, 1vw, 20px);
+    text-align: center;
+    padding: clamp(5px, 2.2vw, 10px);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin: clamp(5px, 2.2vw, 10px);
+}
+.centrar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boton{
+    display: block;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    width: clamp(80px, 30vw, 300px);
+    min-width: 80px;
+    margin: clamp(5px, 2.2vw, 10px) auto;
+    text-align: center;
+    font-size: clamp(12px, 1.1vw, 20px);
+}
+
+.boton:hover {
+    background-color: #3f3f3f;
+}
+
+.truncar {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer {
+    background: linear-gradient(to bottom, #2a2a2a, #4a4a4a);
+    color: #ffffff;
+    padding: 20px 40px;
+    overflow: hidden;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenedor-enlaces {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.enlaces {
+    min-width: 150px;
+    
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    ul {
+        margin: clamp(5px,1.1vw,10px) 0;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: clamp(8px, 1.1vw, 14px);
+    }
+
+    ul li a:hover {
+        text-decoration: underline;
+        color: #aaa;
+    }
+
+    h3 {
+        font-size: clamp(10px, 1.3vw, 18px);
+        display: inline-block;
+    }
+}
+
+.iconos-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.icono-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: clamp(90px, 2.2vw, 120px);
+    border: 1px solid #aaa;
+
+}
+
+.icono-contenedor .icono {
+
+    font-size: clamp(8px, 1.1vw, 14px);
+    margin-bottom: 5px;
+
+}
+
+.icono-contenedor .nombre {
+    font-size: clamp(8px, 1.1vw, 14px);
+    background: #c4c4c4;
+    color: #000;
+    padding: 5px;
+}
+
+.redes-sociales {
+    text-align: center;
+    margin-top: 20px;
+
+    a {
+    margin: 0 5px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    }
+
+    a:hover {
+        color: #aaa;
+    }
+}
+
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+}
+
+.modal-contenido {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+#imagen-modal {
+    max-height: 800px;
+}
+
+.cerrar {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #f1f1f1;
+}
+
+
+.admin-contenedor-productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(5px, 1vw, 20px);
+    margin: 0 clamp(5px, 2.2vw, 20px);
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-producto {
+    flex: 1 1 23vw;
+    width:23vw;
+    max-width: 23vw;
+    min-width: 170px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+
+    img{
+        width: 100%;
+        height: auto;
+        transition: opacity 1s ease-in-out;
+        opacity: 1;
+    }
+}
+
+.admin-añadir{
+    margin:clamp(5px, 2.5vw, 30px);
+    padding: clamp(5px, 2.5vw, 30px);
+    border: none;
+    background-color: rgba(160, 159, 159, 0.20);
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);;
+    color: rgba(0, 0, 0, 0.392);
+    border-radius: 10px;
+}
+.texto-añadir{
+    padding: 5px;
+    font-size: clamp(10px, 2.5vw, 15px);
+}
+
+.añadir-producto {
+    position: absolute;
+    top: 12vh;
+    right: 3vh;
+    padding: 5px;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(10px, 4vw, 20px);
+    font-weight: bold;
+    color: black;
+}
+
+@media (max-width: 768px) {
+ header {
+        height: 10vh;
+        font-size: 17px;
+        p {
+            margin-left: 5px;
+        }
+
+    }
+
+    header div {
+        gap: 3.5vw;
+        svg{
+            stroke-width: 1.3px;
+            transform: scale(0.8);
+        }
+    }
+
+    #banner {
+        height: 40vh;
+    }
+
+    
+
+    .texto button{
+            padding: 10px 15px;
+    }
+
+    .descripcion {
+        button {
+            padding: 8px;
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+
+
+    .contenedor-enlaces {
+        gap: 15px;
+    }
+
+    .enlaces{
+        min-width: 90px;
+    }
+
+    #imagen-modal {
+        width: 80vw;
+    }
+
+    .contenedor-footer {
+        justify-content: space-around;
+    }
+    .iconos-footer {
+        gap: 5px;
+    }
+
+    .icono-contenedor {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .redes-sociales {
+        font-size: 14px;
+    }
+}

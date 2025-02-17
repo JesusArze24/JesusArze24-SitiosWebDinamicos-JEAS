@@ -1,0 +1,32 @@
+<%- include( 'layout', {title: 'Edición de Clientes',body: null}) %>
+
+<main class="container">
+    <h1 class="title">Editar Cliente</h1>
+    <form action="/edit/<%= cliente._id %>?_method=PUT" method="POST" class="form">
+        <div class="form-group">
+            <label for="ci">CI:</label>
+            <input type="number" id="ci" name="ci" value="<%= cliente.ci %>" required class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" value="<%= cliente.nombres %>" required class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" value="<%= cliente.apellidos %>" required class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="celular">Celular:</label>
+            <input type="number" id="celular" name="celular" value="<%= cliente.celular %>" required class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" value="<%= cliente.correo %>" required class="form-input">
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+    <a href="/" class="btn btn-secondary center">Regresar</a>
+</main>
+<footer>
+    <p>&copy; 2023 Sistema de Clientes.</p>
+</footer>

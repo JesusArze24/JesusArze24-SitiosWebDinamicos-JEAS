@@ -1,0 +1,15 @@
+<%- include( 'layout', {body: null}) %>
+<section class="contenedor-formulario" style = "margin-top:10.1vh">
+    <h1 class="titulo" >Añade prendas nuevas</h1>
+    <form action="/productos/crear" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" class="input-formulario" required>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="" cols="30" rows="10" class="input-formulario" required></textarea>
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" class="input-formulario" required>
+        <label for="imagen">Imagen:</label>
+        <input type="text" name="imagen" class="input-formulario" required>
+        <button class="boton" type="submit">Añadir producto</button>
+    </form>
+</section>

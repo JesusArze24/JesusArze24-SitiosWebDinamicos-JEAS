@@ -1,0 +1,33 @@
+<%- include( 'layout', {body: null}) %>
+<section id="productos" style = "margin-top:10.1vh">
+    <h1>LISTA DE LOS PRODUCTOS DISPONIBLES</h1>
+    <a href="/productos/crear" class="añadir-producto">Añadir producto</a>
+    <div class = "admin-contenedor-productos">
+        <% productos.forEach(producto => { %>
+        <div class="admin-producto">
+            <a href="/productos/producto/<%= producto.id %>">
+                <img src="/Images/<%= producto.imagen %>" alt="<%= producto.nombre %>">
+            </a>
+            <div class="descripcion">
+                <a href="/productos/producto/<%= producto.id %>">
+                    <h2 class="truncar" ><%= producto.nombre %></h2>
+                </a>
+                <p class="truncar"><%= producto.descripcion %></p>
+                <p class="precio"><%= producto.precio %> USD</p>
+                <div class="centrar">
+                    <button onclick="location.href='/productos/editar/<%= producto.id %>'">Editar</button>
+                    <button onclick="location.href='/productos/eliminar/<%= producto.id %>' ">Eliminar</button>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+    <div class="centrar">
+        <button onclick="location.href='/productos/crear'" class="admin-añadir" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="clamp(8px, 10vw, 90px)" height="clamp(8px, 10vw, 90px)" fill="rgba(0, 0, 0, 0.2)" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+            </svg>
+            <p class="texto-añadir">Añadir producto</p>
+        </button>
+    </div>
+</section>

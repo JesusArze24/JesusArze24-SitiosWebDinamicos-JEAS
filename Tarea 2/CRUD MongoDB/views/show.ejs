@@ -1,0 +1,13 @@
+<%- include( 'layout', {title: 'Detalles de Clientes',body: null}) %>
+<main class="container">
+    <h1 class="title">Cliente: <%= cliente.nombres %> <%= cliente.apellidos %></h1>
+    <div class="details">
+        <p><strong>CI:</strong> <%= cliente.ci %></p>
+        <p><strong>Celular:</strong> <%= cliente.celular %></p>
+        <p><strong>Correo:</strong> <%= cliente.correo %></p>
+    </div>
+    <a href="/" class="btn btn-secondary">Regresar</a>
+</main>
+<footer>
+    <p>&copy; 2023 Sistema de Clientes.</p>
+</footer>

@@ -1,0 +1,20 @@
+<%- include( 'layout', {body: null}) %>
+<div class="producto-detalle" style="margin-top:10.5vh">
+    <h1 class="titulo">Detalles de la prenda "<%= producto.nombre %>" </h1>
+    <img id="imagen-detalle" src="/Images/<%= producto.imagen %>" alt="<%= producto.nombre %>">
+    <div class="descripcion-detalle" >
+        <h2><%= producto.nombre %></h2>
+        <p><%= producto.descripcion %></p>
+        <p><%= producto.precio %> USD</p>
+        <div class="centrar">
+            <button class="boton">Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+<section id="modal" class="modal">
+    <div class="contenido">
+        <img class="modal-contenido" id="imagen-modal">
+        <span class="cerrar">&times;</span>
+    </div>
+</section>
+<script src="/script.js"></script>
