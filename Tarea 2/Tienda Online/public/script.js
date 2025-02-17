@@ -1,9 +1,3 @@
-//Alert que sale en la raiz (página principal)
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === '/') {
-      alert('El CRUD de los productos esta en el header de la pagina en el link ADMINISTRADOR');
-    }
-  });
 
 //Cambiar de imagen para cada producto en la pagina principal
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             left: -300,
             behavior: 'smooth'
         });
+
+        console.log("grid.scrollLeft");
     });
 
     scrollRightButton.addEventListener('click', () => {
